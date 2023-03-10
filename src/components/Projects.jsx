@@ -1,6 +1,6 @@
 export default function Projects () {
   return (
-    <section id='projects' className='mb-10 px-10'>
+    <section id='projects' className='mb-10 px-10 py-24'>
       <div className='flex justify-center mb-14'>
         <h2 className='text-center text-2xl font-bold text-gray-700'>PROYECTOS</h2>
       </div>
