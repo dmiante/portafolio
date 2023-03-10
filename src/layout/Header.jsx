@@ -5,9 +5,18 @@ import { Transition } from '@headlessui/react'
 
 export default function Header () {
   const [isOpen, setIsOpen] = useState(false)
+
+  // function scroll () {
+  //   window.scroll({
+  //     top: document.body.offsetHeight,
+  //     left: 0,
+  //     behavior: 'smooth'
+  //   })
+  // }
+
   return (
     <>
-      <header className='fixed w-full shadow-sm backdrop-blur border-b border-gray-800/10 bg-white/10'>
+      <header className='fixed w-full shadow-sm backdrop-blur border-b border-gray-800/10 bg-white/10 scroll-smooth'>
         <div className='mx-auto max-w-6xl p-4 sm:px-6'>
           <div className='flex items-center justify-between gap-4 lg:gap-10'>
             <div className='flex lg:w-0 lg:flex-1'>
@@ -47,10 +56,10 @@ export default function Header () {
                 <span className='sr-only'>Open menu</span>
                 {!isOpen
                   ? (
-                    <CgMenuRight />
+                    <CgMenuRight size={30} name='Menu Open' />
                     )
                   : (
-                    <CgClose />
+                    <CgClose size={30} name='Menu Close' />
                     )}
               </button>
             </div>
@@ -65,17 +74,21 @@ export default function Header () {
             leaveFrom='opacity-100 scale-100'
             leaveTo='opacity-0 scale-95'
           >
-            <section className='backdrop-blur bg-white/10 min-h-screen flex p-y-12'>
-              <div className='flex flex-col items-center justify-center p-3 '>
-                <nav className='flex flex-col gap-5'>
-                  {HeaderLink.map((link) => (
-                    <a
-                      key={link.url}
-                      href={link.url}
-                    >{link.title}
-                    </a>
-                  ))}
-                </nav>
+            <section className='flex flex-row justify-center items-center px-4 pt-5'>
+              <div className='w-full'>
+                <ul className='text-center flex flex-col gap-y-4 font-semibold text-gray-700 text-lg'>
+                  {HeaderLink.map((link) => {
+                    return (
+                      <li key={link.url} className='underline underline-offset-2 decoration-logo decoration-2'>
+                        <a
+                          href={link.url}
+                          onClick={() => setIsOpen(false)}
+                        >{link.title}
+                        </a>
+                      </li>
+                    )
+                  })}
+                </ul>
               </div>
             </section>
 
