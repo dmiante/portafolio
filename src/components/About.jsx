@@ -1,7 +1,7 @@
 export default function About () {
   return (
     <>
-      <section id='about' className='mb-10 px-10 py-24'>
+      <section id='about' className='mb-10 px-10 pt-24'>
         <div className='flex justify-center mb-14'>
           <h2 className='text-center text-2xl font-bold text-gray-700'>SOBRE MÍ</h2>
         </div>
