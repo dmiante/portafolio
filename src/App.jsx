@@ -8,7 +8,7 @@ import Header from './layout/Header'
 function App () {
   return (
     <>
-      <div className='min-h-screen mx-auto bg-primary w-full'>
+      <div className='min-h-screen mx-auto bg-pattern-primary bg-primary bg-no-repeat bg-contain w-full'>
         <Header />
         <main className='flex flex-col max-w-6xl mx-auto'>
           <div className='min-h-screen flex items-center justify-center py-12'>
@@ -18,13 +18,13 @@ function App () {
                 <br className='hidden sm:block' />
                 Soy Damián
               </h1>
-              <h2 className='text-3xl font-semibold text-gray-700'>Desarrollador Front-end</h2>
+              <h2 className='text-3xl font-semibold text-gray-700'>Programador Front-end</h2>
               <SocialsNav />
             </section>
           </div>
           <About />
-          <Technology />
           <Projects />
+          <Technology />
         </main>
         <Footer />
       </div>
