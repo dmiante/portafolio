@@ -5,7 +5,7 @@
 </p>
 </div>
 
-## Construido con:
+## 🛠️ Construido con:
 
 - ⚡️ [Vitejs](https://vitejs.dev/)
 - ⚒️ [React 18](https://reactjs.org/)
@@ -13,6 +13,6 @@
 - 🤖 [React Icons](https://react-icons.github.io/react-icons)
 
 
-## 🚀 Deploy on Vercel:
+## 🚀 Deploy en Vercel:
 
 - [damiansoto.vercel.app](https://damiansoto.vercel.app/)
