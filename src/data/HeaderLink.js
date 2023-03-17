@@ -4,15 +4,11 @@ export const HeaderLink = [
     url: '#about'
   },
   {
-    title: 'Tecnologías',
-    url: '#techs'
-  },
-  {
     title: 'Proyectos',
     url: '#projects'
   },
   {
-    title: 'Contacto',
-    url: '#contact'
+    title: 'Tecnologías',
+    url: '#techs'
   }
 ]
