@@ -17,10 +17,10 @@ export const PROJECTS_DATA = [
   },
   {
     title: 'Portafolio',
-    description: 'Portafolio donde muestro mis proyectos.',
+    description: 'Un portafolio web que muestro mis proyectos y habilidades.',
     gh: 'https://github.com/dmiante/portafolio',
     url: 'https://damiansoto.dev/',
-    image: '../src/assets/projects/card-top.jpg',
+    image: '../src/assets/projects/portafolio.png',
     tags: ['React', 'JavaScript', 'TailwindCSS']
   }
 ]
