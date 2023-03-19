@@ -1,4 +1,6 @@
 import Climapp from '../assets/projects/climapp.png'
+import Giffy from '../assets/projects/giffy.png'
+import Portafolio from '../assets/projects/portafolio.png'
 export const PROJECTS_DATA = [
   {
     title: 'Climapp',
@@ -13,7 +15,7 @@ export const PROJECTS_DATA = [
     description: 'Clon de Giphy.com hecho con React.',
     gh: 'https://github.com/dmiante/giffy',
     url: 'https://giffy-dmiante.vercel.app/',
-    image: '/src/assets/projects/giffy.png',
+    image: Giffy,
     tags: ['React', 'JavaScript', 'CSS']
   },
   {
@@ -21,7 +23,7 @@ export const PROJECTS_DATA = [
     description: 'Un portafolio web que muestro mis proyectos y habilidades.',
     gh: 'https://github.com/dmiante/portafolio',
     url: 'https://damiansoto.dev/',
-    image: '/src/assets/projects/portafolio.png',
+    image: Portafolio,
     tags: ['React', 'JavaScript', 'TailwindCSS']
   }
 ]
