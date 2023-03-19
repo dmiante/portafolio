@@ -1,10 +1,11 @@
+import Climapp from '../assets/projects/climapp.png'
 export const PROJECTS_DATA = [
   {
     title: 'Climapp',
     description: 'Simple aplicación del clima con autocompletado.',
     gh: 'https://github.com/dmiante/climapp',
     url: 'https://climapp-dmiante.vercel.app/',
-    image: '/src/assets/projects/climapp.png',
+    image: Climapp,
     tags: ['React', 'JavaScript', 'CSSModules']
   },
   {
