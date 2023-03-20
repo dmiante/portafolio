@@ -76,7 +76,7 @@ export default function Header () {
           >
             <section className='flex flex-row justify-center items-center px-4 pt-5'>
               <div className='w-full'>
-                <ul className='text-center flex flex-col gap-y-4 font-semibold text-gray-700 text-lg'>
+                <ul className='text-center flex flex-col gap-y-4 font-semibold text-gray-700 text-lg dark:text-white'>
                   {HeaderLink.map((link) => {
                     return (
                       <li key={link.url} className='underline underline-offset-2 decoration-logo decoration-2'>
