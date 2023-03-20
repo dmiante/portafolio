@@ -5,7 +5,7 @@ export default function Projects () {
   return (
     <section id='projects' className='mb-10 py-24 px-10'>
       <div className='flex justify-center mb-14'>
-        <h2 className='text-center text-4xl md:text-5xl font-bold text-gray-700 mb-5'>PROYECTOS</h2>
+        <h2 className='text-center text-4xl md:text-5xl font-bold text-gray-700 dark:text-slate-300 mb-5'>PROYECTOS</h2>
       </div>
       <div className='grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-2'>
         {PROJECTS_DATA.map((projects) => (
