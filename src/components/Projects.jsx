@@ -2,7 +2,6 @@ import { PROJECTS_DATA } from '../data/Projects'
 import { TbWorldWww, TbBrandGithub } from 'react-icons/tb'
 
 export default function Projects () {
-  const [{ tags }] = PROJECTS_DATA
   return (
     <section id='projects' className='mb-10 py-24 px-10'>
       <div className='flex justify-center mb-14'>
@@ -43,7 +42,7 @@ export default function Projects () {
                 </a>
               </div>
               <div className='pt-4 pb-2'>
-                {tags.map((tag, index) => (
+                {projects.tags.map((tag, index) => (
                   <span key={index} className='inline-block rounded-full px-3 py-1 text-sm font-normal italic text-white border mr-2 mb-2'>{`#${tag}`}</span>
                 ))}
               </div>
