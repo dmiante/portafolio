@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}'
@@ -14,7 +15,8 @@ module.exports = {
         logo: '#ff4057'
       },
       backgroundImage: {
-        'pattern-primary': "url('/src/assets/hyperspace.svg')"
+        'pattern-dark': "url('/src/assets/hyperspace_dark.svg')",
+        'pattern-light': "url('/src/assets/hyperspace_light.svg')"
       },
       fontFamily: {
         sans: ['Rubik', 'sans-serif']

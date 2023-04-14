@@ -2,13 +2,17 @@ import About from './components/About'
 import Projects from './components/Projects'
 import SocialsNav from './components/SocialsNav'
 import Technology from './components/Technology'
+import { useTheme } from './hooks/useTheme'
 import Footer from './layout/Footer'
 import Header from './layout/Header'
 
 function App () {
+  const { theme } = useTheme()
+  console.log(theme)
+
   return (
     <>
-      <div className='min-h-screen mx-auto bg-pattern-primary bg-primary dark:bg-slate-800 bg-no-repeat bg-contain w-full'>
+      <div className={`min-h-screen mx-auto ${theme === 'dark' ? 'bg-pattern-light' : 'bg-pattern-dark'} bg-primary dark:bg-slate-800 bg-no-repeat bg-contain w-full`}>
         <Header />
         <main className='flex flex-col max-w-6xl mx-auto'>
           <div className='min-h-screen flex items-center justify-center py-12'>

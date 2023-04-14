@@ -1,18 +1,16 @@
 import { useState } from 'react'
 import { HeaderLink } from '../data/HeaderLink'
-import { CgMenuRight, CgClose } from 'react-icons/cg'
+
 import { Transition } from '@headlessui/react'
+import { motion } from 'framer-motion'
+import { CgMenuRight, CgClose } from 'react-icons/cg'
+import { CiDark, CiLight } from 'react-icons/ci'
+import { useTheme } from '../hooks/useTheme'
 
 export default function Header () {
   const [isOpen, setIsOpen] = useState(false)
-
-  // function scroll () {
-  //   window.scroll({
-  //     top: document.body.offsetHeight,
-  //     left: 0,
-  //     behavior: 'smooth'
-  //   })
-  // }
+  const { theme, handleClick } = useTheme()
+  // console.log(theme)
 
   return (
     <>
@@ -36,6 +34,23 @@ export default function Header () {
               ))}
             </nav>
             <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
+              <motion.button
+                onClick={handleClick}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className='bg-transparent border-0 cursor-pointer outline-none'
+              >
+                <motion.div
+                  initial={{ rotate: 0 }}
+                  animate={{ rotate: theme === 'light' ? 180 : 0 }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                  className='flex items-center px-4'
+                >
+                  {theme === 'dark'
+                    ? (<CiDark size={35} color='white' />)
+                    : (<CiLight size={35} />)}
+                </motion.div>
+              </motion.button>
               <a
                 className='inline-block rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75 text-white'
                 href='mailto:soto.damian02@gmail.com'
