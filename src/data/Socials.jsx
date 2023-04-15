@@ -14,3 +14,18 @@ export const socialLinks = [
     icon: <SiGmail name='Gmail' size={40} />
   }
 ]
+
+export const socialLinksFooter = [
+  {
+    url: 'https://github.com/dmiante',
+    icon: <SiGithub name='Github' size={22} />
+  },
+  {
+    url: 'https://www.linkedin.com/in/damian-soto/',
+    icon: <SiLinkedin name='Linkedin' size={22} />
+  },
+  {
+    url: 'mailto:soto.damian02@gmail.com',
+    icon: <SiGmail name='Gmail' size={22} />
+  }
+]

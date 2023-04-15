@@ -10,7 +10,7 @@ export default function SocialsNav () {
             href={links.url}
             target='_blank'
             rel='noreferrer'
-            className='text-logo transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-75'
+            className='text-logo transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-150'
           >
             {links.icon}
           </a>
