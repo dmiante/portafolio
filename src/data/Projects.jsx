@@ -1,6 +1,6 @@
-import Climapp from '../assets/projects/climapp.png'
-import Giffy from '../assets/projects/giffy.png'
-import Portafolio from '../assets/projects/portafolio.png'
+import Climapp from '../assets/projects/climapp.webp'
+import Giffy from '../assets/projects/giffy.webp'
+import Portafolio from '../assets/projects/portafolio.webp'
 export const PROJECTS_DATA = [
   {
     title: 'Climapp',

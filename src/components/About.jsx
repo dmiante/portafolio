@@ -1,4 +1,4 @@
-import Profile from '../assets/profile_BW.jpeg'
+import Profile from '../assets/profile_BW.webp'
 export default function About () {
   return (
     <>
