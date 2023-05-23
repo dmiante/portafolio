@@ -46,6 +46,7 @@ export default function Header () {
                   transition={{ duration: 0.5, ease: 'easeInOut' }}
                   className='flex items-center px-4'
                 >
+                  <span className='sr-only'>Switch color theme</span>
                   {theme === 'dark'
                     ? (<CiDark size={35} color='white' />)
                     : (<CiLight size={35} />)}

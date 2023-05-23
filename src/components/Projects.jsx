@@ -31,14 +31,18 @@ export default function Projects () {
                   target='_blank'
                   rel='noreferrer'
                   className='hover:text-slate-700'
-                ><TbBrandGithub name='github' size={50} />
+                >
+                  <span className='sr-only'>{projects.title}</span>
+                  <TbBrandGithub name='github' size={50} />
                 </a>
                 <a
                   href={projects.url}
                   target='_blank'
                   rel='noreferrer'
                   className='hover:text-blue-700'
-                ><TbWorldWww name='www' size={50} />
+                >
+                  <span className='sr-only'>{projects.title}</span>
+                  <TbWorldWww name='www' size={50} />
                 </a>
               </div>
               <div className='pt-4 pb-2'>
