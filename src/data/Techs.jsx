@@ -7,6 +7,8 @@ import Tailwindcss from '../assets/skill/tailwindcss.svg'
 import Git from '../assets/skill/git.svg'
 import Mysql from '../assets/skill/mysql.svg'
 import Vscode from '../assets/skill/vscode.svg'
+import Svelte from '../assets/skill/svelte.svg'
+import TypeScript from '../assets/skill/typescript.svg'
 
 export const technologies = [
   {
@@ -44,5 +46,13 @@ export const technologies = [
   {
     name: 'VSCODE',
     icon: <img width={50} height={50} src={Vscode} alt='vscode' />
+  },
+  {
+    name: 'Svelte',
+    icon: <img width={50} height={50} src={Svelte} alt='svelte' />
+  },
+  {
+    name: 'TypeScript',
+    icon: <img width={50} height={50} src={TypeScript} alt='typescript' />
   }
 ]
