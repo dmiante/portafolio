@@ -10,7 +10,6 @@ import { useTheme } from '../hooks/useTheme'
 export default function Header () {
   const [isOpen, setIsOpen] = useState(false)
   const { theme, handleClick } = useTheme()
-  // console.log(theme)
 
   return (
     <>

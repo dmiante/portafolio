@@ -21,7 +21,6 @@ export function useTheme () {
 
   function handleClick () {
     setTheme(theme === 'dark' ? 'light' : 'dark')
-    // console.log(theme)
   }
 
   return {
