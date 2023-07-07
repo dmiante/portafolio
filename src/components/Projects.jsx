@@ -57,13 +57,13 @@ export default function Projects () {
           href='https://github.com/dmiante?tab=repositories'
           target='_blank'
           rel='noreferrer'
-          className='flex flex-col items-center justify-center hover:bg-slate-400 bg-white/90 rounded-lg w-full h-96'
+          className='flex flex-col items-center justify-center bg-gray-800 hover:bg-gray-700 dark:hover:bg-[#eff0f3]/70 dark:bg-[#eff0f3]/90 rounded-lg w-full h-96'
         >
-          <h2 className='text-xl font-semibold capitalize mb-2'>
+          <h2 className='text-4xl font-semibold capitalize mb-2 text-white dark:text-black'>
             Otros proyectos
           </h2>
           <span className='sr-only'>github</span>
-          <TbBrandGithub name='github' size={50} />
+          <TbBrandGithub name='github' size={70} className='text-white dark:text-black' />
         </a>
       </div>
     </section>

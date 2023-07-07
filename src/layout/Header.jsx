@@ -13,13 +13,13 @@ export default function Header () {
 
   return (
     <>
-      <header className='fixed w-full shadow-sm backdrop-blur border-b border-gray-800/10 bg-white/10 scroll-smooth'>
+      <header className='fixed w-full py-3 z-10 shadow-sm backdrop-blur border-b border-gray-800/10 bg-white/10 scroll-smooth'>
         <div className='mx-auto max-w-6xl p-4 sm:px-6'>
-          <div className='flex items-center justify-between gap-4 lg:gap-10'>
+          <div className='flex items-center justify-around gap-4 lg:gap-10'>
             <div className='flex lg:w-0 lg:flex-1'>
               <a href='/' className='-m-1.5 p-1.5'>
                 <span className='sr-only'>Logo</span>
-                <img className='w-14 h-auto' src='/logo-ds.svg' alt='logo' />
+                <img className='w-24 h-auto' src='/logo-ds.svg' alt='logo' />
               </a>
             </div>
             <nav className='hidden lg:flex lg:gap-x-11'>
@@ -27,7 +27,7 @@ export default function Header () {
                 <a
                   key={link.url}
                   href={link.url}
-                  className='hover:bg-logo rounded-md p-2 hover:text-white dark:text-white'
+                  className='hover:bg-logo py-3 px-4 text-2xl rounded-md p-2 hover:text-white dark:text-white'
                 >{link.title}
                 </a>
               ))}

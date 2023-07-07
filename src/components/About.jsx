@@ -10,7 +10,7 @@ export default function About () {
           <p className='text-gray-600 dark:text-slate-300 text-start font-semibold text-base md:text-xl lg:text-2xl'>
             Soy <span className='italic underline underline-offset-2 decoration-2 decoration-logo'>Damián Soto</span>, programador de software e ingeniero en informática de Santiago de Chile.
             <br />
-            Me considero proactivo, comprometido y apasionado por la tecnología 🖥️ y los videojuegos 🕹️. Actualmente, aprendo programación con <span className='text-yellow-500'>JavaScript</span> y <span className='text-sky-500'>React</span>
+            Me considero proactivo, comprometido y un apasionado por la tecnología 🖥️ y los videojuegos 🕹️. Actualmente, aprendo programación con <span className='text-yellow-500'>JavaScript</span> y <span className='text-sky-500'>React</span>
           </p>
           <img src={Profile} alt='profile' loading='lazy' className='rounded-3xl border-logo border-4' width={350} />
         </div>
