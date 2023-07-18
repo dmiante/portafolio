@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { HeaderLink } from '../data/HeaderLink'
 
 import { Transition } from '@headlessui/react'
@@ -10,16 +10,31 @@ import { useTheme } from '../hooks/useTheme'
 export default function Header () {
   const [isOpen, setIsOpen] = useState(false)
   const { theme, handleClick } = useTheme()
+  const [scrollPosition, setScrollPosition] = useState(0)
+
+  useEffect(() => {
+    const updatePosition = () => {
+      setScrollPosition(window.scrollY)
+    }
+
+    window.addEventListener('scroll', updatePosition)
+
+    updatePosition()
+
+    return () => window.removeEventListener('scroll', updatePosition)
+  }, [])
 
   return (
     <>
-      <header className='fixed w-full py-3 z-10 shadow-sm backdrop-blur border-b border-gray-800/10 bg-white/10 scroll-smooth'>
-        <div className='mx-auto max-w-6xl p-4 sm:px-6'>
+      <header
+        className={`fixed w-full py-3 z-10 ${scrollPosition > 0 ? 'shadow-sm backdrop-blur border-b border-gray-800/10 bg-white/10' : ''}`}
+      >
+        <div className='mx-auto max-w-6xl p-px sm:px-6'>
           <div className='flex items-center justify-around gap-4 lg:gap-10'>
             <div className='flex lg:w-0 lg:flex-1'>
               <a href='/' className='-m-1.5 p-1.5'>
                 <span className='sr-only'>Logo</span>
-                <img className='w-24 h-auto' src='/logo-ds.svg' alt='logo' />
+                <img className='w-14 h-auto' src='/logo-ds.svg' alt='logo' />
               </a>
             </div>
             <nav className='hidden lg:flex lg:gap-x-11'>
@@ -27,12 +42,12 @@ export default function Header () {
                 <a
                   key={link.url}
                   href={link.url}
-                  className='hover:bg-logo py-3 px-4 text-2xl rounded-md p-2 hover:text-white dark:text-white'
+                  className='hover:bg-logo py-2 px-4 text-xl rounded-md p-2 hover:text-white dark:text-white'
                 >{link.title}
                 </a>
               ))}
             </nav>
-            <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
+            <div className='hidden gap-2 lg:flex lg:flex-1 lg:justify-end'>
               <motion.button
                 onClick={handleClick}
                 whileHover={{ scale: 1.1 }}
@@ -52,13 +67,13 @@ export default function Header () {
                 </motion.div>
               </motion.button>
               <a
-                className='inline-block rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75 text-white'
+                className='relative flex justify-center items-center rounded-md bg-white dark:bg-black overflow-visible border-2 border-logo after:content-[""] after:w-0 after:h-full after:bg-logo after:absolute after:right-0 after:transition-all after:ease-in-out hover:after:right-auto hover:after:left-0 hover:after:w-full'
                 href='mailto:soto.damian02@gmail.com'
               >
                 <span
-                  className='block rounded-full bg-white dark:bg-slate-700 px-8 py-3 text-sm font-medium hover:bg-transparent text-black hover:text-white dark:text-white'
+                  className='text-center no-underline w-full px-5 py-4 tracking-wide transition-all ease-in-out text-black dark:text-white font-medium text-xl z-20 hover:text-white'
                 >
-                  !Contáctame!
+                  ¡Contáctame!
                 </span>
               </a>
             </div>
