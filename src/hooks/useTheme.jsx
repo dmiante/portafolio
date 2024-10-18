@@ -5,9 +5,9 @@ export function useTheme () {
 
   useEffect(() => {
     if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-      setTheme('dark')
-    } else {
       setTheme('light')
+    } else {
+      setTheme('dark')
     }
   }, [])
 

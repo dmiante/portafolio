@@ -3,6 +3,7 @@ import Giffy from '../assets/projects/giffy.webp'
 import Portafolio from '../assets/projects/portafolio.webp'
 import PokeChang from '../assets/projects/pokechang.webp'
 import Removebg from '../assets/projects/removebg.webp'
+import Shrtu from '../assets/projects/shrtu.webp'
 
 export const PROJECTS_DATA = [
   {
@@ -11,7 +12,8 @@ export const PROJECTS_DATA = [
     gh: 'https://github.com/dmiante/climapp',
     url: 'https://climapp-dmiante.vercel.app/',
     image: Climapp,
-    tags: ['React', 'JavaScript', 'CSSModules']
+    tags: ['React', 'JavaScript', 'CSSModules'],
+    show: true
   },
   {
     title: 'Giffy',
@@ -19,7 +21,8 @@ export const PROJECTS_DATA = [
     gh: 'https://github.com/dmiante/giffy',
     url: 'https://giffy-dmiante.vercel.app/',
     image: Giffy,
-    tags: ['React', 'JavaScript', 'CSS']
+    tags: ['React', 'JavaScript', 'CSS'],
+    show: false
   },
   {
     title: 'Portafolio',
@@ -27,7 +30,8 @@ export const PROJECTS_DATA = [
     gh: 'https://github.com/dmiante/portafolio',
     url: 'https://damiansoto.dev/',
     image: Portafolio,
-    tags: ['React', 'JavaScript', 'TailwindCSS']
+    tags: ['React', 'JavaScript', 'TailwindCSS'],
+    show: false
   },
   {
     title: 'PokeChang',
@@ -35,7 +39,8 @@ export const PROJECTS_DATA = [
     gh: 'https://github.com/dmiante/poke-chang',
     url: 'https://poke-chang.vercel.app',
     image: PokeChang,
-    tags: ['React', 'JavaScript', 'TailwindCSS', 'PokeAPI']
+    tags: ['React', 'JavaScript', 'TailwindCSS', 'PokeAPI'],
+    show: true
   },
   {
     title: 'RemoveBG',
@@ -43,6 +48,16 @@ export const PROJECTS_DATA = [
     gh: 'https://github.com/dmiante/removebg',
     url: 'https://removebackground.vercel.app',
     image: Removebg,
-    tags: ['Svelte', 'TypeScript', 'TailwindCSS', 'Cloudinary']
+    tags: ['Svelte', 'TypeScript', 'TailwindCSS', 'Cloudinary'],
+    show: true
+  },
+  {
+    title: 'shrtu',
+    description: 'Acortador de urls rápido y simple.',
+    gh: 'https://github.com/dmiante/short-url',
+    url: 'https://shrtu.vercel.app',
+    image: Shrtu,
+    tags: ['NextJS', 'TypeScript', 'TailwindCSS', 'Prisma', 'Supabase'],
+    show: true
   }
 ]

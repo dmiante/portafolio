@@ -1,4 +1,4 @@
-import About from './components/About'
+// import About from './components/About'
 import Projects from './components/Projects'
 import SocialsNav from './components/SocialsNav'
 import Technology from './components/Technology'
@@ -25,7 +25,7 @@ function App () {
               <SocialsNav />
             </section>
           </div>
-          <About />
+          {/* <About /> */}
           <Projects />
           <Technology />
         </main>
