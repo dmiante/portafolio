@@ -5,7 +5,8 @@ import Technology from './components/Technology'
 import Footer from './layout/Footer'
 import Header from './layout/Header'
 
-function App () {
+// eslint-disable-next-line space-before-function-paren
+function App() {
   return (
     <>
       <div className='min-h-screen mx-auto text-black bg-pattern-dark dark:bg-pattern-light bg-white dark:bg-black dark:text-white bg-no-repeat bg-contain w-full'>
@@ -25,7 +26,6 @@ function App () {
               <SocialsNav />
             </section>
           </div>
-          {/* <About /> */}
           <Projects />
           <Technology />
         </main>
