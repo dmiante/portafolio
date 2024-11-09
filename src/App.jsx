@@ -9,21 +9,18 @@ import Header from './layout/Header'
 function App() {
   return (
     <>
-      <div className='min-h-screen mx-auto text-black bg-pattern-dark dark:bg-pattern-light bg-white dark:bg-black dark:text-white bg-no-repeat bg-contain w-full'>
+      <div className='min-h-screen mx-auto text-black bg-pattern-dark dark:bg-pattern-light bg-white dark:bg-neutral-900 dark:text-white bg-no-repeat bg-contain w-full'>
         <Header />
         <main className='flex flex-col max-w-6xl mx-auto'>
           <div className='min-h-screen flex items-center justify-center py-12'>
             <section className='max-w-md sm:max-w-lg md:sm:max-w-2xl lg:sm:max-w-3xl w-full space-y-8 text-center'>
-              <span className='text-3xl font-light'>
-                ¡Hola! 👋
-              </span>
-              <h1 className='text-5xl bg-black dark:text-white bg-clip-text text-transparent font-medium tracking-widest sm:text-6xl md:text-6xl lg:text-8xl'>
+              <h1 className='text-5xl font-medium tracking-widest sm:text-6xl md:text-6xl lg:text-8xl bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-500 bg-clip-text text-transparent'>
                 Damián Soto
               </h1>
               <h2 className='text-3xl font-light'>
-                DESARROLLADOR WEB
+                FullStack Dev
               </h2>
-              <SocialsNav />
+              <SocialsNav className='text-sky-500 hover:text-sky-700' size={36} />
             </section>
           </div>
           <Projects />
