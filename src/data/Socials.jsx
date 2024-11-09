@@ -1,19 +1,19 @@
-import { SiGithub, SiGmail, SiLinkedin } from 'react-icons/si'
+import { LuGithub, LuMail, LuLinkedin } from 'react-icons/lu'
 
 export const SOCIAL_LINKS = [
   {
     name: 'Github',
     url: 'https://github.com/dmiante',
-    Icon: ({ className = '' }) => <SiGithub className={className} />
+    Icon: ({ className = '', size }) => <LuGithub className={className} size={size} />
   },
   {
     name: 'Linkedin',
     url: 'https://www.linkedin.com/in/damian-soto/',
-    Icon: ({ className = '' }) => <SiLinkedin className={className} />
+    Icon: ({ className = '', size }) => <LuMail className={className} size={size} />
   },
   {
     name: 'Gmail',
     url: 'mailto:soto.damian02@gmail.com',
-    Icon: ({ className = '' }) => <SiGmail className={className} />
+    Icon: ({ className = '', size }) => <LuLinkedin className={className} size={size} />
   }
 ]
