@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion'
 import { CiDark, CiLight } from 'react-icons/ci'
 import { useTheme } from '../hooks/useTheme'
+import { Logo } from '../assets/Logo'
 
 export default function Header () {
   const { theme, handleClick } = useTheme()
@@ -13,9 +14,9 @@ export default function Header () {
       >
         <nav className='flex items-center justify-between w-full p-6'>
           <div className='flex lg:w-0 lg:flex-1'>
-            <a href='/' className='-m-1.5 p-1.5'>
+            <a href='/' className='-m-1.5 p-1.5 text-white'>
               <span className='sr-only'>Logo</span>
-              <img className='w-14 h-auto' src='/logo-ds.svg' alt='logo' />
+              <Logo className='w-14 h-auto text-transparent stroke-black dark:stroke-white' />
             </a>
           </div>
           {/* Button theme color */}
