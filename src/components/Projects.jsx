@@ -1,73 +1,63 @@
+import { LuGithub } from 'react-icons/lu'
 import { PROJECTS_DATA } from '../data/Projects'
-import { TbWorldWww, TbBrandGithub } from 'react-icons/tb'
 
 export default function Projects () {
   return (
     <section id='projects' className='mb-10 py-24 px-10'>
       <div className='flex justify-center mb-14'>
-        <h2 className='text-center text-4xl md:text-5xl font-bold text-black dark:text-white mb-5'>PROYECTOS</h2>
+        <h2 className='text-center text-4xl md:text-5xl text-black font-light dark:text-white mb-5'>
+          PROYECTOS
+        </h2>
       </div>
-      <div className='grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-2'>
-        {PROJECTS_DATA.map((projects) => (
+      <ul>
+        {PROJECTS_DATA.sort((a, b) => b.priority - a.priority).map((projects) => (
           projects.show && (
-            <div
+            <li
               key={projects.url}
-              className='overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg w-full h-96 group'
-              style={{ backgroundImage: `url(${projects.image})` }}
+              className='grid grid-cols-2 gap-10 mb-20 border px-7 py-6 rounded-lg border-gray-200 dark:border-neutral-800 shadow-md'
             >
-              <div
-                className='flex flex-col justify-between w-full h-full px-8 py-4  duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100'
-              >
-                <div>
-                  <h2 className='mt-4 text-xl font-semibold text-white capitalize'>
-                    {projects.description}
-                  </h2>
-                  <p className='mt-2 text-2xl tracking-wider text-blue-400 uppercase'>
-                    {projects.title}
-                  </p>
+              <a href={projects.url} target='_blank' rel='noreferrer'>
+                <img src={projects.image} alt={projects.title} className='rounded-xl' width={500} height={400} />
+              </a>
+              <div className='flex flex-col justify-between'>
+                <div className='flex flex-col gap-4'>
+                  <div className='flex gap-10 items-baseline justify-between'>
+                    <a
+                      href={projects.url} target='_blank' rel='noreferrer' className='hover:underline hover:underline-offset-4 dark:hover:text-sky-800 hover:text-sky-500'
+                    >
+                      <h3
+                        className='text-4xl font-semibold  dark:text-sky-500 dark:hover:text-sky-800'
+                      >
+                        {projects.title}
+                      </h3>
+                    </a>
+                    <div className='flex gap-6'>
+                      <a
+                        href={projects.url} target='_blank' rel='noreferrer'
+                        className='group flex justify-center transition-all rounded-md p-2 dark:hover:bg-zinc-800 hover:bg-neutral-100'
+                      >
+                        <LuGithub size={24} />
+                        <span
+                          className='absolute opacity-0 group-hover:opacity-100 group-hover:-translate-y-8 duration-500 text-sm'
+                        >GitHub
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <p className='dark:text-slate-300'>{projects.description}</p>
                 </div>
-                <div className='flex flex-row justify-center gap-10 text-white'>
-                  <a
-                    href={projects.gh}
-                    target='_blank'
-                    rel='noreferrer'
-                    className='hover:text-logo'
-                  >
-                    <span className='sr-only'>{projects.title}</span>
-                    <TbBrandGithub name='github' size={50} />
-                  </a>
-                  <a
-                    href={projects.url}
-                    target='_blank'
-                    rel='noreferrer'
-                    className='hover:text-logo'
-                  >
-                    <span className='sr-only'>{projects.title}</span>
-                    <TbWorldWww name='www' size={50} />
-                  </a>
-                </div>
-                <div className='pt-4 pb-2'>
-                  {projects.tags.map((tag, index) => (
-                    <span key={index} className='inline-block rounded-full px-3 text-lg font-normal italic text-white'>{`#${tag}`}</span>
-                  ))}
+                <div className='flex flex-wrap items-center gap-2 py-4 cursor-default'>{projects.tags.map(({ tech, icon }) => (
+                  <div key={tech} className='flex gap-2 border border-gray-200 dark:border-neutral-800 dark:hover:border-neutral-700 rounded-full px-6 py-3 text-sm items-center hover:border-gray-300'>
+                    {icon && <img src={icon} alt={tech} width={20} height={20} className='object-contain' />}
+                    <p>{tech}</p>
+                  </div>
+                ))}
                 </div>
               </div>
-            </div>
+            </li>
           )
         ))}
-        <a
-          href='https://github.com/dmiante?tab=repositories'
-          target='_blank'
-          rel='noreferrer'
-          className='flex flex-col items-center justify-center bg-black hover:bg-black/95 dark:hover:bg-white/90 dark:bg-white rounded-lg w-full h-96'
-        >
-          <h2 className='text-4xl font-semibold capitalize mb-2 text-white dark:text-black'>
-            Otros proyectos
-          </h2>
-          <span className='sr-only'>github</span>
-          <TbBrandGithub name='github' size={70} className='text-white dark:text-black' />
-        </a>
-      </div>
+      </ul>
     </section>
   )
 }
