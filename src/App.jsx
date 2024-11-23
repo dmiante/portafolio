@@ -2,7 +2,6 @@
 import Projects from './components/Projects'
 import { ScrollDown } from './components/ScrollDown'
 import SocialsNav from './components/SocialsNav'
-import Technology from './components/Technology'
 import Footer from './layout/Footer'
 import Header from './layout/Header'
 
@@ -19,14 +18,13 @@ function App() {
                 Damián Soto
               </h1>
               <h2 className='text-3xl font-light'>
-                FullStack Dev
+                Full Stack Developer
               </h2>
               <SocialsNav className='text-sky-500 hover:text-sky-700' size={36} />
             </section>
             <ScrollDown />
           </div>
           <Projects />
-          <Technology />
         </main>
         <Footer />
       </div>
