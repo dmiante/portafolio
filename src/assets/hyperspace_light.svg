@@ -1,4 +1,10 @@
-<svg width="640" height="480" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"> 
+<svg
+  width="640"
+  height="480"
+  viewBox="0 0 640 480"
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="none"
+  > 
 <style type="text/css"> 
   line { stroke: rgba(255,255,255,0.361); stroke-width: 1.01px; stroke-linecap: round; vector-effect: non-scaling-stroke; }
 </style> 
