@@ -20,7 +20,7 @@ function App() {
               <h2 className='text-3xl font-light'>
                 Full Stack Developer
               </h2>
-              <SocialsNav className='text-sky-500 hover:text-sky-700' size={36} />
+              <SocialsNav className='dark:text-sky-400 text-sky-400 hover:text-sky-800 dark:hover:text-white group flex justify-center transition-all rounded-md p-2' size={36} />
             </section>
             <ScrollDown />
           </div>

@@ -12,6 +12,11 @@ export default function SocialsNav ({ className, size }) {
             rel='noreferrer'
             className={className}
           >
+            <span
+              className='absolute opacity-0 group-hover:opacity-100 group-hover:translate-y-12 duration-500 text-sm text-sky-800 dark:text-white'
+            >
+              {name}
+            </span>
             <span className='sr-only'>{name}</span>
             <Icon size={size} aria-hidden='true' />
           </a>
