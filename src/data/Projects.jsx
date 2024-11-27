@@ -1,6 +1,4 @@
 import Climapp from '../assets/projects/climapp.png'
-// import Giffy from '../assets/projects/giffy.webp'
-// import Portafolio from '../assets/projects/portafolio.webp'
 import PokeChang from '../assets/projects/pokechang.png'
 import Removebg from '../assets/projects/removebg.png'
 import Shrtu from '../assets/projects/shrtu.png'
@@ -69,7 +67,7 @@ export const PROJECTS_DATA = [
   },
   {
     title: 'shrtu',
-    description: 'Acortador de urls rápido y simple.',
+    description: 'Acortador de urls simple y rápido.',
     gh: 'https://github.com/dmiante/short-url',
     url: 'https://shrtu.vercel.app',
     image: Shrtu,
