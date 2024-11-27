@@ -9,11 +9,11 @@ export const SOCIAL_LINKS = [
   {
     name: 'Linkedin',
     url: 'https://www.linkedin.com/in/damian-soto/',
-    Icon: ({ className = '', size }) => <LuMail className={className} size={size} />
+    Icon: ({ className = '', size }) => <LuLinkedin className={className} size={size} />
   },
   {
     name: 'Gmail',
     url: 'mailto:soto.damian02@gmail.com',
-    Icon: ({ className = '', size }) => <LuLinkedin className={className} size={size} />
+    Icon: ({ className = '', size }) => <LuMail className={className} size={size} />
   }
 ]
