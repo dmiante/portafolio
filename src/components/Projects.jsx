@@ -1,4 +1,4 @@
-import { LuGithub } from 'react-icons/lu'
+import { LuArrowUpRight, LuGithub } from 'react-icons/lu'
 import { PROJECTS_DATA } from '../data/Projects'
 
 export default function Projects () {
@@ -14,22 +14,37 @@ export default function Projects () {
           projects.show && (
             <li
               key={projects.url}
-              className='grid grid-cols-2 gap-10 mb-20 border px-7 py-6 rounded-lg border-gray-200 dark:border-neutral-800 shadow-md'
+              className='grid grid-cols-2 gap-10 mb-20 border px-7 py-6 rounded-lg border-gray-200 dark:border-neutral-800 shadow-md bg-slate-50 dark:bg-neutral-900'
             >
-              <a href={projects.url} target='_blank' rel='noreferrer'>
-                <img src={projects.image} alt={projects.title} className='rounded-xl' width={500} height={400} />
+              <a
+                href={projects.url}
+                target='_blank'
+                rel='noreferrer'
+                className='relative w-full flex-col items-center gap-8 overflow-clip rounded-3xl shadow-xl transition duration-500 ease-in-out sm:rounded-xl md:group-hover:shadow-2xl'
+              >
+                <img
+                  src={projects.image}
+                  alt={projects.title}
+                  width={500}
+                  height={400}
+                  className=' w-full object-cover object-top transition duration-500 hover:scale-105 sm:h-full sm:border md:scale-110 md:group-hover:scale-105'
+                />
               </a>
               <div className='flex flex-col justify-between'>
                 <div className='flex flex-col gap-4'>
                   <div className='flex gap-10 items-baseline justify-between'>
                     <a
-                      href={projects.url} target='_blank' rel='noreferrer' className='hover:underline hover:underline-offset-4 dark:hover:text-sky-800 hover:text-sky-500'
+                      href={projects.url}
+                      target='_blank'
+                      rel='noreferrer'
+                      className='flex items-start gap-1 hover:underline hover:underline-offset-4 dark:hover:text-sky-800 hover:text-sky-700'
                     >
                       <h3
-                        className='text-4xl font-semibold  dark:text-sky-500 dark:hover:text-sky-800'
+                        className='text-4xl font-semibold text-sky-500 dark:text-sky-500 dark:hover:text-sky-800 hover:text-sky-700'
                       >
                         {projects.title}
                       </h3>
+                      <LuArrowUpRight size={18} />
                     </a>
                     <div className='flex gap-6'>
                       <a
@@ -39,7 +54,7 @@ export default function Projects () {
                         <LuGithub size={24} />
                         <span
                           className='absolute opacity-0 group-hover:opacity-100 group-hover:-translate-y-8 duration-500 text-sm'
-                        >GitHub
+                        >Repo
                         </span>
                       </a>
                     </div>
