@@ -9,7 +9,7 @@ import Header from './layout/Header'
 function App() {
   return (
     <>
-      <div className='mx-auto text-black bg-pattern-dark dark:bg-pattern-light bg-white dark:bg-neutral-900 dark:text-white bg-no-repeat bg-contain w-full'>
+      <div className='min-h-screen mx-auto text-black bg-pattern-dark dark:bg-pattern-light bg-white dark:bg-neutral-900 dark:text-white bg-no-repeat bg-cover bg-fixed bg-center w-full'>
         <Header />
         <main className='flex flex-col max-w-6xl mx-auto'>
           <div className='min-h-screen flex flex-col items-center justify-center py-12'>
